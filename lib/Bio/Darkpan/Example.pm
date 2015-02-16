@@ -1,5 +1,13 @@
 package Bio::Darkpan::Example;
 
+# ABSTRACT: Choose your CPAN force side. Defaults to the dark side
+
+=head1 SYNOPSIS
+
+Testing feasibility of a darkpan with Pinto
+
+=cut
+
 use Moose;
 
 has 'force_side' => ( is => 'rw', isa => 'Str');

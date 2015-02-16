@@ -4,7 +4,7 @@ package Bio::Darkpan::CommandLine::SpecialScript;
 
 =head1 SYNOPSIS
 
-Testing feasibility of a darkpan
+Gets commandline arguments and does something with them
 
 =cut
 
