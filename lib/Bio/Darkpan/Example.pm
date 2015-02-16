@@ -1,6 +1,6 @@
 package Bio::Darkpan::Example;
 
-# ABSTRACT: Choose your CPAN force side. Defaults to the dark side
+# ABSTRACT: Choose your CPAN side of the force. Defaults to the dark side
 
 =head1 SYNOPSIS
 
@@ -16,9 +16,9 @@ has 'month' => ( is => 'rw', isa => 'Str');
 has 'hour' => ( is => 'rw', isa => 'Str');
 has 'minute' => ( is => 'rw', isa => 'Str');
 
-has '_force_balance_report' => ( is => 'rw', isa  => 'Str', lazy_build => 1 );
+has '_force_balance_report' => ( is => 'rw', isa  => 'Str', lazy => 1, builder => 'build__force_balance_report' );
 
-sub build__force_balance_report {
+sub _build__force_balance_report {
 
     my ($self) = @_;
     my $force_balance_report = 'The force is stronger on the ' . $self->force_side;
