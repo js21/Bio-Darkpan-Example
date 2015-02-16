@@ -45,6 +45,7 @@ sub run {
   my $now = DateTime::Tiny->now;
   my $force_balance = Bio::Darkpan::Example->new(
       force_side => $self->side,
+      year       => $now->year,
       day        => $now->day,
       month      => $now->month,
       hour       => $now->hour,

@@ -11,12 +11,13 @@ Testing feasibility of a darkpan with Pinto
 use Moose;
 
 has 'force_side' => ( is => 'rw', isa => 'Str');
+has 'year' => ( is => 'rw', isa => 'Str');
 has 'day' => ( is => 'rw', isa => 'Str');
 has 'month' => ( is => 'rw', isa => 'Str');
 has 'hour' => ( is => 'rw', isa => 'Str');
 has 'minute' => ( is => 'rw', isa => 'Str');
 
-has '_force_balance_report' => ( is => 'rw', isa  => 'Str', lazy => 1, builder => 'build__force_balance_report' );
+has '_force_balance_report' => ( is => 'rw', isa  => 'Str', lazy => 1, builder => '_build__force_balance_report' );
 
 sub _build__force_balance_report {
 
