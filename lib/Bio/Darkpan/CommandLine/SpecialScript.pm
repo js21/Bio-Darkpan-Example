@@ -11,6 +11,7 @@ Testing feasibility of a darkpan
 use Moose;
 use Getopt::Long qw(GetOptionsFromArray);
 use Cwd 'abs_path';
+use Bio::Darkpan::Example;
 use Capture::Tiny;
 use File::Basename;
 use File::Fetch;
@@ -42,7 +43,17 @@ sub run {
 
   my ($self) = @_;
   my $now = DateTime::Tiny->now;
-  print('The force is stronger on the ' , $self->side, ' side at ', $now->day, '/', $now->month, '/', $now->year, ' - ', $now->hour, ':', $now->minute, "\n");
+  my $force_balance = Bio::Darkpan::Example->new(
+      force_side => $self->side,
+      day        => $now->day,
+      month      => $now->month,
+      hour       => $now->hour,
+      minute     => $now->minute
+      );
+
+  $force_balance->report_balance();
+
+
 
 
 }
