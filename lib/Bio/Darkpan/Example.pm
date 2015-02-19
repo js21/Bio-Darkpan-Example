@@ -18,6 +18,7 @@ has 'hour' => ( is => 'rw', isa => 'Str');
 has 'minute' => ( is => 'rw', isa => 'Str');
 
 has '_force_balance_report' => ( is => 'rw', isa  => 'Str', lazy => 1, builder => '_build__force_balance_report' );
+has 'store_report' => ( is => 'rw', isa => 'Str');
 
 sub _build__force_balance_report {
 
@@ -25,6 +26,7 @@ sub _build__force_balance_report {
     my $force_balance_report = 'The force is stronger on the ' . $self->force_side;
     $force_balance_report .= ' side at ' . $self->day . '/' . $self->month . '/';
     $force_balance_report .= $self->year . ' - ' . $self->hour . ':' . $self->minute . "\n";
+    $self->store_report($force_balance_report);
 
 }
 
