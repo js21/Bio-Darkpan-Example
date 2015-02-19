@@ -2,7 +2,14 @@
 All notable changes to this project will be documented in this file.
 From verison 1.0.0, this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unrelease][unreleased]
+## [Unreleased][unreleased]
+### Changed
+- It might work
+
+## [1.0.1] - 2015-02-19
+### Changed
+- Testing if dzil release picks up changes to the Changes file drectly
+
+## [1.0.0] - 2015-02-19
 ### Changed
 - Versioning convention
-
