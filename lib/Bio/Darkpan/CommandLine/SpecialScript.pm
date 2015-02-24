@@ -18,7 +18,6 @@ use File::Fetch;
 use File::Copy;
 use Data::Dumper;
 use DateTime::Tiny;
-use GD::Graph;
 
 has 'args'        => ( is => 'ro', isa => 'ArrayRef', required => 1 );
 has 'side'        => ( is => 'rw', isa => 'Maybe[Str]', lazy => 1, default => 'Darkpan' );

@@ -9,6 +9,7 @@ Testing feasibility of a darkpan with Pinto
 =cut
 
 use Moose;
+use GD::Graph;
 
 has 'force_side' => ( is => 'rw', isa => 'Str');
 has 'year' => ( is => 'rw', isa => 'Str');
